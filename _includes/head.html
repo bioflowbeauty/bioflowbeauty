@@ -2,21 +2,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  {% capture pagetitle %}
+  {% capture title %}
     {%- if page.share-title -%}
       {{ page.share-title | strip_html | xml_escape }}
     {%- elsif page.title -%}
       {{ page.title | strip_html | xml_escape  }}
     {%- else -%}
       {{ site.title | strip_html | xml_escape }}
-    {%- endif -%}
-  {% endcapture %}
-
-  {% capture title %}
-    {%- if site.title and site.title-on-all-pages and (site.title != pagetitle) -%}
-      {{ pagetitle }} | {{ site.title }}
-    {%- else -%}
-      {{ pagetitle }}
     {%- endif -%}
   {% endcapture %}
 
@@ -33,15 +25,8 @@
 
   <title>{{ title }}</title>
 
-  {% capture author %}
-    {%- if page.author -%}
-      {{  page.author | strip_html }}
-    {%- elsif site.author -%}
-      {{ site.author }}
-    {%- endif -%}
-  {% endcapture %}
-  {% if author != "" %}
-  <meta name="author" content="{{ author }}">
+  {% if site.author %}
+  <meta name="author" content="{{ site.author }}">
   {% endif %}
 
   <meta name="description" content="{{ description }}">
@@ -62,7 +47,6 @@
   {% include gtm_head.html %}
   {% include google_analytics.html %}
   {% include cloudflare_analytics.html %}
-  {% include mathjax.html %}
 
   {% if layout.common-ext-css %}
     {% for css in layout.common-ext-css %}
@@ -87,7 +71,7 @@
       {% include ext-css.html css=css %}
     {% endfor %}
   {% endif %}
-  
+
   {% if page.css %}
     {% for css in page.css %}
       <link rel="stylesheet" href="{{ css | relative_url }}">
@@ -128,9 +112,7 @@
 
   {% if page.id %}
   <meta property="og:type" content="article">
-  {% if author != "" %}
-  <meta property="og:article:author" content="{{ author }}">
-  {% endif %}
+  <meta property="og:article:author" content="{{ site.author }}">
   <meta property="og:article:published_time" content="{{ page.date | date_to_xmlschema }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
@@ -161,15 +143,74 @@
   <link rel="stylesheet" href="{{ "/assets/css/staticman.css" | relative_url }}">
   {% endif %}
 
-  {% assign favicon_exists = site.static_files | where: "path", "/favicon.ico" | size %}
-  {% if favicon_exists == 1 %}
-  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" />
-  {% endif %}
-
   {% if page.head-extra %}
     {% for file in page.head-extra %}
       {% include {{ file }} %}
     {% endfor %}
+  {% endif %}
+
+  <!-- Google AdSense -->
+  <!-- Adicionar quando AdSense for aprovado para bioflowbeauty.com -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <!-- Schema Markup JSON-LD -->
+  {% if page.id %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title | strip_html | xml_escape }}",
+    "description": "{{ description | strip_html | xml_escape }}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.date | date_to_xmlschema }}",
+    "author": {
+      "@type": "Person",
+      "name": "Leonardo Olivieri Carvalho",
+      "jobTitle": "Biomedical Scientist",
+      "url": "https://bioflowbeauty.com/aboutme/",
+      "sameAs": [
+        "https://www.linkedin.com/in/leonardo-carvalho-8a960728",
+        "https://onlinelibrary.wiley.com/doi/10.1002/jcb.25124"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BioFlowBeauty",
+      "url": "https://bioflowbeauty.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://bioflowbeauty.com/assets/img/bioflowbeauty-logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    }{% if img != "" %},
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{ img | absolute_url }}"
+    }{% endif %}
+  }
+  </script>
+  {% else %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "BioFlowBeauty",
+    "url": "https://bioflowbeauty.com",
+    "description": "Evidence-based beauty and women's health insights by a biomedical scientist",
+    "author": {
+      "@type": "Person",
+      "name": "Leonardo Olivieri Carvalho",
+      "jobTitle": "Biomedical Scientist",
+      "sameAs": [
+        "https://www.linkedin.com/in/leonardo-carvalho-8a960728",
+        "https://onlinelibrary.wiley.com/doi/10.1002/jcb.25124"
+      ]
+    }
+  }
+  </script>
   {% endif %}
 
 </head>

@@ -1,0 +1,253 @@
+/* =====================================================
+   BioFlowBeauty Custom Styles
+   Paleta: Rosa profundo #8b3a5a | Dourado #c9956c | Creme #f5ede6
+   ===================================================== */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+/* --- Tipografia --- */
+body {
+  font-family: 'Jost', sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  color: #2d1b14;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: -0.01em;
+}
+
+/* --- Navbar --- */
+.navbar {
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 2px 20px rgba(139, 58, 90, 0.18);
+}
+
+/* --- Links da navbar: underline animado --- */
+.navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.navbar-nav > li > a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c9956c;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar-nav > li > a:hover::after {
+  width: 100%;
+}
+
+/* --- Cards de post: hover com elevação suave --- */
+.post-preview {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.post-preview:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(139, 58, 90, 0.10);
+}
+
+/* --- Título do post --- */
+.post-preview a.post-title {
+  transition: color 0.2s ease;
+}
+
+.post-preview a.post-title:hover {
+  color: #8b3a5a;
+  text-decoration: none;
+}
+
+/* --- Tags: estilo pílula elegante --- */
+.blog-tags a,
+.post-preview .blog-tags a {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  background-color: rgba(201, 149, 108, 0.12);
+  color: #8b3a5a;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  margin: 2px 3px;
+}
+
+.blog-tags a:hover {
+  background-color: #8b3a5a;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* --- Botões --- */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 6px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* --- Imagens nos posts --- */
+.post-entry img,
+article img {
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: block;
+  max-width: 100%;
+}
+
+.post-entry img:hover,
+article img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(139, 58, 90, 0.12);
+}
+
+/* --- Links dentro dos posts --- */
+.post-body a,
+article a {
+  background-image: linear-gradient(#c9956c, #c9956c);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 2px;
+  transition: background-size 0.3s ease, color 0.2s ease;
+  text-decoration: none;
+}
+
+.post-body a:hover,
+article a:hover {
+  background-size: 100% 2px;
+  text-decoration: none;
+}
+
+/* --- Cards de afiliados --- */
+.affiliate-card {
+  border: 1px solid rgba(201, 149, 108, 0.25);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.25s ease;
+}
+
+.affiliate-card:hover {
+  border-color: #c9956c;
+  box-shadow: 0 6px 24px rgba(201, 149, 108, 0.18);
+  transform: translateY(-3px);
+}
+
+/* --- Linha separadora --- */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #c9956c, transparent);
+  margin: 2.5rem 0;
+  opacity: 0.4;
+}
+
+/* --- Animação de entrada --- */
+.container.main-content,
+#main-content,
+.page-content {
+  animation: fadeInUp 0.5s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Scroll suave --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- AdSense --- */
+.adsbygoogle {
+  margin: 2rem auto;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* --- Author note block --- */
+.author-note {
+  background: linear-gradient(135deg, rgba(139,58,90,0.06), rgba(201,149,108,0.08));
+  border-left: 4px solid #c9956c;
+  border-radius: 0 10px 10px 0;
+  padding: 1.2rem 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .post-preview {
+    padding: 1rem;
+  }
+
+  .post-preview:hover {
+    transform: none;
+  }
+}
+
+/* --- Footer --- */
+.footer-links {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  display: inline-block;
+  margin: 0 0.3rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}

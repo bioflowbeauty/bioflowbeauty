@@ -6,148 +6,162 @@ cover-img: false
 ---
 
 <style>
-/* ── Reset subtitle ── */
 .page-subheading { display: none !important; }
+.page-heading { display: none !important; }
 
-/* ── Fonts ── */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap');
-
-/* ── Hero ── */
-.bfb-hero {
+/* ── Hero Magazine ── */
+.bfb-magazine-hero {
   position: relative; overflow: hidden;
-  text-align: center; padding: 3.5rem 1.5rem 2.5rem;
-  margin: -1rem -1rem 2.5rem;
-  background: linear-gradient(160deg, #fdf0ea 0%, #fdf8f5 50%, #f9eef4 100%);
-  border-radius: 0 0 32px 32px;
+  margin: -1rem -1rem 0;
+  min-height: 380px;
+  display: flex; align-items: stretch;
 }
 #bfb-canvas {
-  position: absolute; top: 0; left: 0;
+  position: absolute; inset: 0;
   width: 100%; height: 100%;
   pointer-events: none; z-index: 0;
 }
-.bfb-hero-inner { position: relative; z-index: 1; }
-.bfb-tagline {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.6rem, 4vw, 2.6rem);
-  font-weight: 400; font-style: italic;
-  color: #8b3a5a; line-height: 1.35;
-  margin: 0 0 0.6rem;
+.bfb-hero-left {
+  flex: 1.2; background: linear-gradient(160deg, #8b3a5a 0%, #6b2040 100%);
+  padding: 3rem 2.5rem; display: flex; flex-direction: column;
+  justify-content: center; position: relative; z-index: 1;
 }
-.bfb-tagline span { color: #c9956c; }
-.bfb-sub {
+.bfb-hero-right {
+  flex: 1; background: linear-gradient(160deg, #f9eef4 0%, #fdf0ea 100%);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 2rem 2rem 2rem 1.5rem; position: relative; z-index: 1;
+}
+.bfb-mag-label {
   font-family: 'Jost', sans-serif;
-  font-size: 0.95rem; font-weight: 300;
-  color: #a0706e; letter-spacing: 0.04em;
-  margin: 0 0 1.8rem;
+  font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em;
+  color: #f5d8e3; text-transform: uppercase; margin: 0 0 1rem;
 }
-.bfb-logo-hero {
-  width: 80px; height: 80px; object-fit: contain;
-  margin: 0 auto 1.2rem; display: block;
-  filter: drop-shadow(0 4px 16px rgba(139,58,90,0.18));
+.bfb-mag-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400; color: #fff;
+  line-height: 1.15; margin: 0 0 1rem;
+}
+.bfb-mag-title em { font-style: italic; color: #f5c8a0; }
+.bfb-mag-desc {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.88rem; font-weight: 300;
+  color: #f0d0dc; line-height: 1.7; margin: 0 0 1.8rem;
+}
+.bfb-mag-btn {
+  display: inline-block; align-self: flex-start;
+  background: #fff; color: #8b3a5a !important;
+  padding: 0.65rem 1.8rem; border-radius: 50px;
+  font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.04em; text-decoration: none !important;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+.bfb-mag-btn:hover { background: #f5ede6; transform: scale(1.04); }
+
+.bfb-hero-logo {
+  width: 64px; margin-bottom: 1.2rem;
   animation: bfbFloat 4s ease-in-out infinite;
+  filter: drop-shadow(0 4px 12px rgba(255,255,255,0.2));
 }
 @keyframes bfbFloat {
   0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-.bfb-hero-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #8b3a5a, #c9956c);
-  color: #fff !important; text-decoration: none !important;
-  padding: 0.75rem 2rem; border-radius: 50px;
-  font-family: 'Jost', sans-serif; font-size: 0.92rem; font-weight: 500;
-  letter-spacing: 0.05em;
-  box-shadow: 0 6px 20px rgba(139,58,90,0.28);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.bfb-hero-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(139,58,90,0.35);
+  50% { transform: translateY(-7px); }
 }
 
-/* ── Philosophy strip ── */
-.bfb-philosophy {
-  display: flex; gap: 1rem; margin: 0 0 2.5rem;
-  flex-wrap: wrap;
+/* right side mini cards */
+.bfb-mini-cards { display: flex; flex-direction: column; gap: 0.6rem; }
+.bfb-mini-card {
+  background: #fff; border-radius: 10px;
+  padding: 0.75rem 1rem; display: flex; align-items: center; gap: 0.75rem;
+  border: 1px solid #f0d8e2;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(139,58,90,0.06);
 }
-.bfb-phil-card {
-  flex: 1; min-width: 140px;
-  background: #fdf8f5; border: 1px solid #f0d8e2;
-  border-radius: 14px; padding: 1.2rem 1rem;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.bfb-mini-card:hover { transform: translateX(4px); box-shadow: 0 4px 16px rgba(139,58,90,0.12); text-decoration: none; }
+.bfb-mini-icon { font-size: 1.3rem; flex-shrink: 0; }
+.bfb-mini-title { font-family: 'Jost', sans-serif; font-size: 0.84rem; font-weight: 600; color: #2d1b14; margin: 0; }
+.bfb-mini-sub { font-family: 'Jost', sans-serif; font-size: 0.72rem; color: #bbb; margin: 0; }
+.bfb-mini-arrow { margin-left: auto; color: #c9956c; font-size: 0.9rem; }
+
+/* ── Philosophy band ── */
+.bfb-band {
+  background: linear-gradient(90deg, #fdf0ea, #fdf8f5, #f9eef4);
+  padding: 1.5rem 1.5rem; margin: 0 -1rem 2.5rem;
+  display: flex; gap: 0; overflow-x: auto;
 }
-.bfb-phil-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(139,58,90,0.10);
+.bfb-band-item {
+  flex: 1; min-width: 120px; text-align: center;
+  padding: 0 1rem; border-right: 1px solid #f0d8e2;
 }
-.bfb-phil-icon { font-size: 1.6rem; margin-bottom: 0.5rem; }
-.bfb-phil-title {
+.bfb-band-item:last-child { border-right: none; }
+.bfb-band-icon { font-size: 1.4rem; margin-bottom: 0.3rem; }
+.bfb-band-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem; font-weight: 600; color: #8b3a5a;
-  margin: 0 0 0.3rem;
+  font-size: 0.95rem; font-weight: 600; color: #8b3a5a; margin: 0 0 0.2rem;
 }
-.bfb-phil-desc {
+.bfb-band-desc {
   font-family: 'Jost', sans-serif;
-  font-size: 0.76rem; color: #a0706e; margin: 0; line-height: 1.5;
+  font-size: 0.7rem; color: #bbb; margin: 0; line-height: 1.4;
 }
 
-/* ── Category buttons ── */
-.bfb-cats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 2.5rem; }
-.bfb-cat {
-  display: flex; align-items: center; gap: 0.8rem;
-  padding: 0.9rem 1.1rem; border-radius: 12px;
-  border: 1.5px solid #f0d8e2; background: #fdf8f5;
-  text-decoration: none; overflow: hidden; position: relative;
-  transition: background 0.3s, border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+/* ── Featured story ── */
+.bfb-story {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1.5rem; margin-bottom: 2.5rem;
 }
-.bfb-cat::before {
+.bfb-story-main {
+  background: linear-gradient(135deg, #8b3a5a, #c9956c);
+  border-radius: 16px; padding: 2rem;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  min-height: 260px; position: relative; overflow: hidden;
+}
+.bfb-story-main::before {
   content: ''; position: absolute; inset: 0;
-  background: linear-gradient(135deg, #8b3a5a, #c9956c);
-  opacity: 0; transition: opacity 0.3s;
+  background: url('/assets/img/posts/women-health-habits-hero.webp') center/cover;
+  opacity: 0.18;
 }
-.bfb-cat:hover::before { opacity: 1; }
-.bfb-cat:hover { transform: scale(1.02); box-shadow: 0 6px 20px rgba(139,58,90,0.20); text-decoration: none; }
-.bfb-cat-icon { font-size: 1.3rem; position: relative; z-index: 1; }
-.bfb-cat-info { position: relative; z-index: 1; }
-.bfb-cat-title { font-size: 0.88rem; font-weight: 600; color: #2d1b14; margin: 0 0 2px; transition: color 0.3s; }
-.bfb-cat:hover .bfb-cat-title { color: #fff; }
-.bfb-cat-desc { font-size: 0.72rem; color: #bbb; margin: 0; transition: color 0.3s; line-height: 1.4; }
-.bfb-cat:hover .bfb-cat-desc { color: #f5d8e3; }
-
-/* ── Featured ── */
-.bfb-featured {
-  background: linear-gradient(135deg, #8b3a5a 0%, #a0486e 50%, #c9956c 100%);
-  border-radius: 16px; padding: 1.6rem 1.8rem;
-  margin-bottom: 2.5rem; position: relative; overflow: hidden;
-}
-.bfb-featured::after {
-  content: '✦'; position: absolute;
-  right: 1.5rem; top: 50%; transform: translateY(-50%);
-  font-size: 5rem; color: rgba(255,255,255,0.06);
-  pointer-events: none;
-}
-.bfb-feat-label {
-  font-family: 'Jost', sans-serif;
-  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em;
+.bfb-story-label {
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em;
   color: #f5d8e3; text-transform: uppercase; margin: 0 0 0.5rem;
+  position: relative; z-index: 1;
 }
-.bfb-feat-title {
+.bfb-story-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem; font-weight: 600; color: #fff;
-  margin: 0 0 0.5rem; line-height: 1.35;
+  font-size: 1.35rem; font-weight: 600; color: #fff;
+  line-height: 1.3; margin: 0 0 1rem; position: relative; z-index: 1;
 }
-.bfb-feat-desc { font-size: 0.84rem; color: #f5ede6; margin: 0 0 1.2rem; line-height: 1.6; }
-.bfb-feat-btn {
-  display: inline-block; background: #fff; color: #8b3a5a !important;
-  padding: 0.5rem 1.4rem; border-radius: 50px;
-  font-size: 0.86rem; font-weight: 600;
-  text-decoration: none !important;
-  transition: background 0.2s, transform 0.2s;
+.bfb-story-btn {
+  display: inline-block; background: rgba(255,255,255,0.2);
+  color: #fff !important; padding: 0.4rem 1rem; border-radius: 50px;
+  font-size: 0.78rem; font-weight: 500; text-decoration: none !important;
+  border: 1px solid rgba(255,255,255,0.4);
+  transition: background 0.2s; position: relative; z-index: 1; align-self: flex-start;
 }
-.bfb-feat-btn:hover { background: #f5ede6; transform: scale(1.04); }
+.bfb-story-btn:hover { background: rgba(255,255,255,0.35); }
 
-/* ── Posts list ── */
+.bfb-story-side { display: flex; flex-direction: column; gap: 1rem; }
+.bfb-story-card {
+  background: #fdf8f5; border: 1px solid #f0d8e2;
+  border-radius: 12px; padding: 1.1rem 1.2rem;
+  text-decoration: none; flex: 1;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.bfb-story-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139,58,90,0.10);
+  border-color: #c9956c; text-decoration: none;
+}
+.bfb-story-card-icon { font-size: 1.2rem; margin-bottom: 0.4rem; }
+.bfb-story-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem; font-weight: 600; color: #2d1b14;
+  margin: 0 0 0.3rem; line-height: 1.3;
+}
+.bfb-story-card-desc { font-size: 0.76rem; color: #bbb; margin: 0; line-height: 1.5; }
+
+/* ── Posts ── */
 .bfb-divider { border: none; border-top: 1px solid #f0d8e2; margin: 2rem 0; }
 .bfb-posts-title {
   font-family: 'Cormorant Garamond', serif;
@@ -155,124 +169,147 @@ cover-img: false
   margin: 0 0 1.2rem; padding-bottom: 0.5rem;
   border-bottom: 2px solid #f0d8e2;
 }
-.bfb-post-item { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #f9eef4; }
-.bfb-post-link { font-size: 1.02rem; font-weight: 600; color: #2d1b14; text-decoration: none; transition: color 0.2s; }
+.bfb-post-item {
+  display: flex; gap: 1rem; align-items: flex-start;
+  margin-bottom: 1.4rem; padding-bottom: 1.4rem;
+  border-bottom: 1px solid #f9eef4;
+}
+.bfb-post-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 400; color: #f0d8e2;
+  line-height: 1; flex-shrink: 0; width: 2rem; text-align: center;
+  padding-top: 0.1rem;
+}
+.bfb-post-content { flex: 1; }
+.bfb-post-link {
+  font-size: 0.98rem; font-weight: 600; color: #2d1b14;
+  text-decoration: none; transition: color 0.2s;
+}
 .bfb-post-link:hover { color: #8b3a5a; }
-.bfb-post-date { font-size: 0.8rem; color: #ccc; margin: 0.2rem 0 0.4rem; }
-.bfb-post-excerpt { font-size: 0.9rem; color: #888; margin: 0; line-height: 1.6; }
+.bfb-post-date { font-size: 0.78rem; color: #ccc; margin: 0.2rem 0 0.35rem; }
+.bfb-post-excerpt { font-size: 0.87rem; color: #999; margin: 0; line-height: 1.6; }
 
-@media (max-width: 580px) {
-  .bfb-hero { padding: 2.5rem 1rem 2rem; margin: -0.5rem -0.5rem 2rem; }
-  .bfb-cats { grid-template-columns: 1fr; }
-  .bfb-philosophy { flex-direction: column; }
-  .bfb-featured::after { display: none; }
+@media (max-width: 640px) {
+  .bfb-magazine-hero { flex-direction: column; min-height: unset; }
+  .bfb-hero-left, .bfb-hero-right { padding: 2rem 1.2rem; }
+  .bfb-hero-right { display: none; }
+  .bfb-story { grid-template-columns: 1fr; }
+  .bfb-story-side { flex-direction: row; }
+  .bfb-band { gap: 0; }
+  .bfb-band-item { min-width: 90px; padding: 0 0.6rem; }
 }
 </style>
 
-<!-- HERO -->
-<div class="bfb-hero">
+<!-- HERO MAGAZINE -->
+<div class="bfb-magazine-hero">
   <canvas id="bfb-canvas"></canvas>
-  <div class="bfb-hero-inner">
-    <img src="/assets/img/bioflowbeauty-logo.png" alt="BioFlowBeauty" class="bfb-logo-hero">
-    <p class="bfb-tagline">
-      Real beauty starts<br>with <span>understanding your body</span>
-    </p>
-    <p class="bfb-sub">Science-based. Honest. Built for women who want to feel well — inside and out.</p>
-    <a href="/2026-05-21-5-science-backed-health-habits-for-women/" class="bfb-hero-btn">Start Here →</a>
+
+  <div class="bfb-hero-left">
+    <img src="/assets/img/bioflowbeauty-logo.png" alt="BioFlowBeauty" class="bfb-hero-logo">
+    <p class="bfb-mag-label">Evidence-Based Beauty and Women's Health</p>
+    <h1 class="bfb-mag-title">Real beauty<br>starts <em>within</em></h1>
+    <p class="bfb-mag-desc">Science-based insights on skincare, hormonal health, nutrition and wellness. Written by a biomedical scientist. No trends. No hype. Just what the research actually says.</p>
+    <a href="/2026-05-21-5-science-backed-health-habits-for-women/" class="bfb-mag-btn">Start Reading</a>
+  </div>
+
+  <div class="bfb-hero-right">
+    <div class="bfb-mini-cards">
+      <a href="/tags#skincare" class="bfb-mini-card">
+        <span class="bfb-mini-icon">✨</span>
+        <span><p class="bfb-mini-title">Skin and Beauty</p><p class="bfb-mini-sub">Ingredients and treatments that work</p></span>
+        <span class="bfb-mini-arrow">›</span>
+      </a>
+      <a href="/tags#hormones" class="bfb-mini-card">
+        <span class="bfb-mini-icon">🌸</span>
+        <span><p class="bfb-mini-title">Hormonal Health</p><p class="bfb-mini-sub">Cycles, perimenopause and thyroid</p></span>
+        <span class="bfb-mini-arrow">›</span>
+      </a>
+      <a href="/tags#nutrition" class="bfb-mini-card">
+        <span class="bfb-mini-icon">🥗</span>
+        <span><p class="bfb-mini-title">Nutrition for Women</p><p class="bfb-mini-sub">Energy, skin health and longevity</p></span>
+        <span class="bfb-mini-arrow">›</span>
+      </a>
+      <a href="/tags#weight-management" class="bfb-mini-card">
+        <span class="bfb-mini-icon">⚖️</span>
+        <span><p class="bfb-mini-title">Weight and Metabolism</p><p class="bfb-mini-sub">What the research supports</p></span>
+        <span class="bfb-mini-arrow">›</span>
+      </a>
+      <a href="/tags#prevention" class="bfb-mini-card">
+        <span class="bfb-mini-icon">🛡️</span>
+        <span><p class="bfb-mini-title">Disease Prevention</p><p class="bfb-mini-sub">Screenings and habits that matter</p></span>
+        <span class="bfb-mini-arrow">›</span>
+      </a>
+    </div>
   </div>
 </div>
 
-<!-- PHILOSOPHY -->
-<div class="bfb-philosophy">
-  <div class="bfb-phil-card">
-    <div class="bfb-phil-icon">🔬</div>
-    <p class="bfb-phil-title">Science First</p>
-    <p class="bfb-phil-desc">Every article grounded in peer-reviewed research — not trends</p>
+<!-- PHILOSOPHY BAND -->
+<div class="bfb-band">
+  <div class="bfb-band-item">
+    <div class="bfb-band-icon">🔬</div>
+    <p class="bfb-band-title">Science First</p>
+    <p class="bfb-band-desc">Peer-reviewed research only</p>
   </div>
-  <div class="bfb-phil-card">
-    <div class="bfb-phil-icon">🌿</div>
-    <p class="bfb-phil-title">Natural Beauty</p>
-    <p class="bfb-phil-desc">Skin, hair and body health from the inside out</p>
+  <div class="bfb-band-item">
+    <div class="bfb-band-icon">🌿</div>
+    <p class="bfb-band-title">Natural Beauty</p>
+    <p class="bfb-band-desc">Health from the inside out</p>
   </div>
-  <div class="bfb-phil-card">
-    <div class="bfb-phil-icon">🕊️</div>
-    <p class="bfb-phil-title">Inner Peace</p>
-    <p class="bfb-phil-desc">Hormonal balance, stress, sleep and purpose — all connected</p>
+  <div class="bfb-band-item">
+    <div class="bfb-band-icon">🕊️</div>
+    <p class="bfb-band-title">Inner Peace</p>
+    <p class="bfb-band-desc">Hormones, stress and sleep</p>
   </div>
-  <div class="bfb-phil-card">
-    <div class="bfb-phil-icon">✦</div>
-    <p class="bfb-phil-title">Your Purpose</p>
-    <p class="bfb-phil-desc">Feeling well is not vanity — it is the foundation for everything</p>
+  <div class="bfb-band-item">
+    <div class="bfb-band-icon">✦</div>
+    <p class="bfb-band-title">Your Purpose</p>
+    <p class="bfb-band-desc">Feeling well is your foundation</p>
   </div>
 </div>
 
-<!-- CATEGORIES -->
-<div class="bfb-cats">
-  <a href="/tags#skincare" class="bfb-cat">
-    <span class="bfb-cat-icon">✨</span>
-    <span class="bfb-cat-info">
-      <p class="bfb-cat-title">Skin & Beauty</p>
-      <p class="bfb-cat-desc">Ingredients, treatments and what works</p>
-    </span>
-  </a>
-  <a href="/tags#hormones" class="bfb-cat">
-    <span class="bfb-cat-icon">🌸</span>
-    <span class="bfb-cat-info">
-      <p class="bfb-cat-title">Hormonal Health</p>
-      <p class="bfb-cat-desc">Cycles, perimenopause, thyroid and more</p>
-    </span>
-  </a>
-  <a href="/tags#nutrition" class="bfb-cat">
-    <span class="bfb-cat-icon">🥗</span>
-    <span class="bfb-cat-info">
-      <p class="bfb-cat-title">Nutrition for Women</p>
-      <p class="bfb-cat-desc">Eating well for energy, skin and longevity</p>
-    </span>
-  </a>
-  <a href="/tags#weight-management" class="bfb-cat">
-    <span class="bfb-cat-icon">⚖️</span>
-    <span class="bfb-cat-info">
-      <p class="bfb-cat-title">Weight & Metabolism</p>
-      <p class="bfb-cat-desc">What the research actually supports</p>
-    </span>
-  </a>
-  <a href="/tags#hair" class="bfb-cat">
-    <span class="bfb-cat-icon">💆</span>
-    <span class="bfb-cat-info">
-      <p class="bfb-cat-title">Hair Health</p>
-      <p class="bfb-cat-desc">Biology of growth, loss and care</p>
-    </span>
-  </a>
-  <a href="/tags#prevention" class="bfb-cat">
-    <span class="bfb-cat-icon">🛡️</span>
-    <span class="bfb-cat-info">
-      <p class="bfb-cat-title">Disease Prevention</p>
-      <p class="bfb-cat-desc">The screenings and habits that matter most</p>
-    </span>
-  </a>
+<!-- FEATURED STORIES -->
+<div class="bfb-story">
+  <div class="bfb-story-main">
+    <p class="bfb-story-label">Start Here</p>
+    <p class="bfb-story-title">5 Science-Backed Health Habits Every Woman Should Know</p>
+    <a href="/2026-05-21-5-science-backed-health-habits-for-women/" class="bfb-story-btn">Read now</a>
+  </div>
+  <div class="bfb-story-side">
+    <a href="/2026-05-21-skincare-science-what-actually-works/" class="bfb-story-card">
+      <div class="bfb-story-card-icon">✨</div>
+      <p class="bfb-story-card-title">Skincare Science: What Actually Works</p>
+      <p class="bfb-story-card-desc">Retinoids, niacinamide, alpha lipoic acid and the evidence behind them</p>
+    </a>
+    <a href="/2026-05-21-hormonal-health-women/" class="bfb-story-card">
+      <div class="bfb-story-card-icon">🌸</div>
+      <p class="bfb-story-card-title">Hormonal Health Across the Lifespan</p>
+      <p class="bfb-story-card-desc">Cycles, PMS, perimenopause and what the science actually supports</p>
+    </a>
+    <a href="/2026-05-21-makeup-safety-what-the-science-says/" class="bfb-story-card">
+      <div class="bfb-story-card-icon">💄</div>
+      <p class="bfb-story-card-title">Makeup Safety: What You Should Know</p>
+      <p class="bfb-story-card-desc">PFAS, parabens, heavy metals and how to make informed choices</p>
+    </a>
+  </div>
 </div>
 
-<!-- FEATURED -->
-<div class="bfb-featured">
-  <p class="bfb-feat-label">⭐ Start Here</p>
-  <p class="bfb-feat-title">5 Science-Backed Health Habits Every Woman Should Know</p>
-  <p class="bfb-feat-desc">Sleep, nutrition, stress, movement and prevention — the five habits with the strongest evidence for women's long-term health and vitality, explained by a biomedical scientist.</p>
-  <a href="/2026-05-21-5-science-backed-health-habits-for-women/" class="bfb-feat-btn">Read now →</a>
-</div>
-
-<!-- POSTS -->
+<!-- POSTS LIST -->
 <hr class="bfb-divider">
-<p class="bfb-posts-title">Latest Articles</p>
+<p class="bfb-posts-title">All Articles</p>
 
+{% assign counter = 1 %}
 {% for post in site.posts %}
 <div class="bfb-post-item">
-  <a href="{{ post.url }}" class="bfb-post-link">{{ post.title }}</a>
-  <p class="bfb-post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
-  <p class="bfb-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+  <span class="bfb-post-num">{{ counter }}</span>
+  <div class="bfb-post-content">
+    <a href="{{ post.url }}" class="bfb-post-link">{{ post.title }}</a>
+    <p class="bfb-post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+    <p class="bfb-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+  </div>
 </div>
+{% assign counter = counter | plus: 1 %}
 {% endfor %}
 
-<!-- PARTICLES CANVAS -->
 <script>
 (function(){
   var canvas = document.getElementById('bfb-canvas');
@@ -281,43 +318,30 @@ cover-img: false
   var hero = canvas.parentElement;
   var particles = [];
   var W, H;
-
-  function resize(){
-    W = canvas.width  = hero.offsetWidth;
-    H = canvas.height = hero.offsetHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize);
-
-  // spawn particles
-  for (var i = 0; i < 55; i++) {
+  function resize(){ W = canvas.width = hero.offsetWidth; H = canvas.height = hero.offsetHeight; }
+  resize(); window.addEventListener('resize', resize);
+  for (var i = 0; i < 40; i++) {
     particles.push({
-      x: Math.random() * 1200,
-      y: Math.random() * 600,
-      r: 1.2 + Math.random() * 2.8,
-      vx: (Math.random() - 0.5) * 0.35,
-      vy: -0.15 - Math.random() * 0.35,
-      alpha: 0.15 + Math.random() * 0.45,
-      hue: Math.random() > 0.5 ? 340 : 30
+      x: Math.random() * 1200, y: Math.random() * 600,
+      r: 1 + Math.random() * 2.5,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: -0.12 - Math.random() * 0.28,
+      alpha: 0.08 + Math.random() * 0.25,
+      hue: Math.random() > 0.5 ? 340 : 28
     });
   }
-
   function draw(){
     ctx.clearRect(0, 0, W, H);
     particles.forEach(function(p){
-      p.x += p.vx;
-      p.y += p.vy;
+      p.x += p.vx; p.y += p.vy;
       if (p.y < -10) { p.y = H + 10; p.x = Math.random() * W; }
       if (p.x < -10) p.x = W + 10;
       if (p.x > W + 10) p.x = -10;
-
-      var g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 2.5);
-      g.addColorStop(0, 'hsla(' + p.hue + ',60%,65%,' + p.alpha + ')');
-      g.addColorStop(1, 'hsla(' + p.hue + ',60%,65%,0)');
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r * 2.5, 0, Math.PI * 2);
-      ctx.fillStyle = g;
-      ctx.fill();
+      var g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 3);
+      g.addColorStop(0, 'hsla('+p.hue+',55%,70%,'+p.alpha+')');
+      g.addColorStop(1, 'hsla('+p.hue+',55%,70%,0)');
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 3, 0, Math.PI * 2);
+      ctx.fillStyle = g; ctx.fill();
     });
     requestAnimationFrame(draw);
   }

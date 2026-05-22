@@ -94,7 +94,9 @@ cover-img: false
 .bfb-band-item {
   flex: 1; min-width: 120px; text-align: center;
   padding: 0 1rem; border-right: 1px solid #f0d8e2;
+  transition: transform 0.2s ease; cursor: pointer; color: inherit;
 }
+.bfb-band-item:hover { transform: translateY(-3px); }
 .bfb-band-item:last-child { border-right: none; }
 .bfb-band-icon { font-size: 1.4rem; margin-bottom: 0.3rem; }
 .bfb-band-title {
@@ -321,26 +323,26 @@ cover-img: false
 
 <!-- PHILOSOPHY BAND -->
 <div class="bfb-band">
-  <div class="bfb-band-item">
+  <a href="/aboutme/" class="bfb-band-item" style="text-decoration:none;">
     <div class="bfb-band-icon">🔬</div>
     <p class="bfb-band-title">Science First</p>
     <p class="bfb-band-desc">Peer-reviewed research only</p>
-  </div>
-  <div class="bfb-band-item">
+  </a>
+  <a href="/2026-05-21-skincare-science-what-actually-works/" class="bfb-band-item" style="text-decoration:none;">
     <div class="bfb-band-icon">🌿</div>
     <p class="bfb-band-title">Natural Beauty</p>
     <p class="bfb-band-desc">Health from the inside out</p>
-  </div>
-  <div class="bfb-band-item">
+  </a>
+  <a href="/2026-05-21-hormonal-health-women-what-the-science-says/" class="bfb-band-item" style="text-decoration:none;">
     <div class="bfb-band-icon">🕊️</div>
     <p class="bfb-band-title">Inner Peace</p>
     <p class="bfb-band-desc">Hormones, stress and sleep</p>
-  </div>
-  <div class="bfb-band-item">
+  </a>
+  <a href="/2026-05-21-5-science-backed-health-habits-for-women/" class="bfb-band-item" style="text-decoration:none;">
     <div class="bfb-band-icon">✦</div>
     <p class="bfb-band-title">Your Purpose</p>
     <p class="bfb-band-desc">Feeling well is your foundation</p>
-  </div>
+  </a>
 </div>
 
 <!-- FEATURED STORIES -->
@@ -356,7 +358,7 @@ cover-img: false
       <p class="bfb-story-card-title">Skincare Science: What Actually Works</p>
       <p class="bfb-story-card-desc">Retinoids, niacinamide, alpha lipoic acid and the evidence behind them</p>
     </a>
-    <a href="/2026-05-21-hormonal-health-women/" class="bfb-story-card">
+    <a href="/2026-05-21-hormonal-health-women-what-the-science-says/" class="bfb-story-card">
       <div class="bfb-story-card-icon">🌸</div>
       <p class="bfb-story-card-title">Hormonal Health Across the Lifespan</p>
       <p class="bfb-story-card-desc">Cycles, PMS, perimenopause and what the science actually supports</p>

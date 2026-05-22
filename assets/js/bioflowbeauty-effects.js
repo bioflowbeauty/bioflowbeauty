@@ -87,6 +87,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // 10. Efeito petala dourada no click dos links da navbar
+  if (!document.getElementById('bfb-petal-style')) {
+    var styleEl = document.createElement('style');
+    styleEl.id = 'bfb-petal-style';
+    styleEl.textContent = '@keyframes bfbPetal{0%{transform:scale(0);opacity:1}100%{transform:scale(1);opacity:0}}';
+    document.head.appendChild(styleEl);
+  }
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var petal = document.createElement('span');
+      var rect = link.getBoundingClientRect();
+      var size = Math.max(rect.width, rect.height) * 2.5;
+      petal.style.cssText = 'position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(201,149,108,0.5) 0%,rgba(139,58,90,0.15) 50%,transparent 100%);width:'+size+'px;height:'+size+'px;left:'+(e.clientX-rect.left-size/2)+'px;top:'+(e.clientY-rect.top-size/2)+'px;pointer-events:none;transform:scale(0);animation:bfbPetal 0.7s ease-out forwards;z-index:9999;';
+      link.style.position = 'relative';
+      link.style.overflow = 'hidden';
+      link.appendChild(petal);
+      petal.addEventListener('animationend', function(){ petal.remove(); });
+    });
+  });
+
 });
 
 /* =====================================================

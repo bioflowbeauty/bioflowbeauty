@@ -79,7 +79,30 @@ h1, h2, h3, h4, h5, h6,
   left: 0;
 }
 
-/* --- Cards de post: hover com elevação suave --- */
+/* --- Dropdown submenus: fonte feminina --- */
+.dropdown-menu {
+  border: 1px solid rgba(201,149,108,0.2);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(139,58,90,0.12);
+  padding: 0.5rem 0;
+}
+
+.dropdown-item {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2d1b14;
+  padding: 0.55rem 1.2rem;
+  transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(to right, rgba(201,149,108,0.1), transparent);
+  color: #8b3a5a;
+  padding-left: 1.6rem;
+}
 .post-preview {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   border-radius: 10px;

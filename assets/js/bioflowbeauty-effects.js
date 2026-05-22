@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // 5. Back to top
   var btt = document.createElement('button');
   btt.innerHTML = '↑'; btt.title = 'Back to top';
-  btt.style.cssText = 'position:fixed;bottom:28px;right:28px;width:42px;height:42px;background:#8b3a5a;color:white;border:none;border-radius:50%;font-size:18px;cursor:pointer;opacity:0;transform:translateY(10px);transition:opacity 0.3s ease,transform 0.3s ease,background 0.2s ease;z-index:9999;box-shadow:0 4px 14px rgba(139,58,90,0.35);';
+  btt.style.cssText = 'position:fixed;bottom:28px;right:28px;width:42px;height:42px;background:#8b3a5a;color:white;border:none;border-radius:50%;font-size:18px;cursor:pointer;opacity:0;transform:translateY(10px);transition:opacity 0.3s ease,transform 0.3s ease,background 0.2s ease;z-index:999;box-shadow:0 4px 14px rgba(139,58,90,0.35);';
   document.body.appendChild(btt);
   btt.addEventListener('mouseenter', function(){ btt.style.background='#c9956c'; });
   btt.addEventListener('mouseleave', function(){ btt.style.background='#8b3a5a'; });

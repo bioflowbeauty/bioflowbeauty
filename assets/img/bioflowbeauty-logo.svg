@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 140" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600&display=swap');
+      .f1{transform-origin:70px 70px;animation:sf1 24s linear infinite}
+      .f2{transform-origin:70px 70px;animation:sf1 34s linear infinite reverse}
+      .f3{transform-origin:70px 70px;animation:sf1 14s linear infinite}
+      @keyframes sf1{100%{transform:rotate(360deg)}}
+      .gp{animation:gpa 4s ease-in-out infinite}
+      @keyframes gpa{0%,100%{opacity:0.18}50%{opacity:0.6}}
+      .cp{animation:cpa 3.2s ease-in-out infinite}
+      @keyframes cpa{0%,100%{opacity:0.45}50%{opacity:0.9}}
+      .logo-text{font-family:'Cormorant Garamond',Georgia,serif;font-size:42px;font-style:italic;font-weight:600}
+      .ornament{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-style:italic;fill:#c9956c;opacity:0.7}
+    </style>
+    <radialGradient id="coreG" cx="42%" cy="38%" r="60%">
+      <stop offset="0%" stop-color="#fff8ee"/>
+      <stop offset="45%" stop-color="#f0b87a"/>
+      <stop offset="100%" stop-color="#c07040"/>
+    </radialGradient>
+    <radialGradient id="glowG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d4845a" stop-opacity="0.5"/>
+      <stop offset="70%" stop-color="#8b3a5a" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#8b3a5a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flameOuter" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#c9956c" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#8b3a5a" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="flameMid" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#d4845a" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#8b3a5a" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="flameInner" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#e8a878" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#c9956c" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <circle cx="70" cy="70" r="68" fill="url(#glowG)" class="gp"/>
+  <g class="f1" fill="url(#flameOuter)">
+    <path d="M70,8 C75,17 77,30 70,36 C63,30 65,17 70,8Z"/>
+    <path d="M70,8 C76,19 75,32 70,36 C65,30 64,18 70,8Z" transform="rotate(30,70,70)"/>
+    <path d="M70,9 C74,18 78,29 70,37 C62,29 66,18 70,9Z" transform="rotate(60,70,70)"/>
+    <path d="M70,7 C75,16 76,31 70,35 C64,29 65,16 70,7Z" transform="rotate(90,70,70)"/>
+    <path d="M70,9 C76,20 74,33 70,37 C66,31 64,19 70,9Z" transform="rotate(120,70,70)"/>
+    <path d="M70,8 C74,17 77,28 70,36 C63,28 66,17 70,8Z" transform="rotate(150,70,70)"/>
+    <path d="M70,7 C75,18 76,30 70,35 C64,28 65,17 70,7Z" transform="rotate(180,70,70)"/>
+    <path d="M70,9 C77,20 75,31 70,37 C65,29 63,18 70,9Z" transform="rotate(210,70,70)"/>
+    <path d="M70,8 C74,17 78,28 70,36 C62,28 66,17 70,8Z" transform="rotate(240,70,70)"/>
+    <path d="M70,9 C75,19 76,32 70,36 C64,30 65,18 70,9Z" transform="rotate(270,70,70)"/>
+    <path d="M70,7 C76,18 75,30 70,35 C65,28 64,17 70,7Z" transform="rotate(300,70,70)"/>
+    <path d="M70,9 C74,20 77,31 70,37 C63,29 66,19 70,9Z" transform="rotate(330,70,70)"/>
+  </g>
+  <g class="f2" fill="url(#flameMid)">
+    <path d="M70,20 C74,27 75,37 70,42 C65,35 66,26 70,20Z" transform="rotate(15,70,70)"/>
+    <path d="M70,19 C75,28 73,38 70,42 C67,36 65,27 70,19Z" transform="rotate(45,70,70)"/>
+    <path d="M70,21 C73,29 76,37 70,43 C64,35 67,27 70,21Z" transform="rotate(75,70,70)"/>
+    <path d="M70,20 C74,28 74,38 70,42 C66,36 66,27 70,20Z" transform="rotate(105,70,70)"/>
+    <path d="M70,19 C75,27 75,37 70,41 C65,35 65,26 70,19Z" transform="rotate(135,70,70)"/>
+    <path d="M70,21 C73,28 76,38 70,43 C64,36 67,27 70,21Z" transform="rotate(165,70,70)"/>
+    <path d="M70,20 C74,27 75,37 70,42 C65,35 66,26 70,20Z" transform="rotate(195,70,70)"/>
+    <path d="M70,19 C75,28 74,38 70,42 C66,36 65,27 70,19Z" transform="rotate(225,70,70)"/>
+    <path d="M70,21 C73,29 75,37 70,43 C65,35 67,28 70,21Z" transform="rotate(255,70,70)"/>
+    <path d="M70,20 C74,28 76,38 70,42 C64,36 66,27 70,20Z" transform="rotate(285,70,70)"/>
+    <path d="M70,19 C75,27 73,37 70,41 C67,35 65,26 70,19Z" transform="rotate(315,70,70)"/>
+    <path d="M70,21 C73,28 75,38 70,43 C65,36 67,27 70,21Z" transform="rotate(345,70,70)"/>
+  </g>
+  <g class="f3" fill="url(#flameInner)">
+    <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(10,70,70)"/>
+    <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(50,70,70)"/>
+    <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(90,70,70)"/>
+    <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(130,70,70)"/>
+    <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(170,70,70)"/>
+    <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(210,70,70)"/>
+    <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(250,70,70)"/>
+    <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(290,70,70)"/>
+    <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(330,70,70)"/>
+  </g>
+  <circle cx="70" cy="70" r="26" fill="url(#coreG)"/>
+  <circle cx="70" cy="70" r="26" fill="none" stroke="#e8a870" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="70" cy="70" r="11" fill="#fff8ee" class="cp"/>
+  <line x1="148" y1="36" x2="148" y2="108" stroke="#e8c8d4" stroke-width="0.6" opacity="0.5"/>
+  <text x="158" y="72" class="ornament">✦</text>
+  <text y="90" class="logo-text">
+    <tspan x="174" fill="#8b3a5a">Bio</tspan><tspan fill="#c9956c">Flow</tspan><tspan fill="#8b3a5a">Beauty</tspan>
+  </text>
+  <text x="408" y="90" class="ornament">✦</text>
+</svg>

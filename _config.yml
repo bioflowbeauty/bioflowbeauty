@@ -105,8 +105,8 @@ site-js:
 # --- Web Analytics Section --- #
 #################################
 
-# google_analytics: "G-XXXXXXXXXX"  # adicionar quando criar a propriedade no GA4
-google_analytics: "G-YD1K38VXSG"
+# google_analytics: "G-XXXXXXXXXX"  # propriedade antiga - nao usar
+gtag: "G-YD1K38VXSG"
 
 ####################
 # --- Comments --- #

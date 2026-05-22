@@ -106,6 +106,7 @@ site-js:
 #################################
 
 # google_analytics: "G-XXXXXXXXXX"  # adicionar quando criar a propriedade no GA4
+google_analytics: "G-YD1K38VXSG"
 
 ####################
 # --- Comments --- #

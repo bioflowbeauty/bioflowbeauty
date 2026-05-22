@@ -34,7 +34,7 @@ cover-img: false
 .bfb-mag-label {
   font-family: 'Jost', sans-serif;
   font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em;
-  color: #f5d8e3; text-transform: uppercase; margin: 0 0 1rem;
+  color: #f5d8e3; text-transform: uppercase; margin: 0.8rem 0 1rem;
 }
 .bfb-mag-title {
   font-family: 'Cormorant Garamond', serif;
@@ -294,27 +294,27 @@ cover-img: false
     <div class="bfb-mini-cards">
       <a href="/tags#skincare" class="bfb-mini-card">
         <span class="bfb-mini-icon">✨</span>
-        <span><span class="bfb-mini-title">Skin and Beauty</span><span class="bfb-mini-sub">Ingredients and treatments that work</span></span>
+        <span style="display:flex;flex-direction:column;gap:2px;"><span class="bfb-mini-title">Skin and Beauty</span><span class="bfb-mini-sub">Ingredients and treatments that work</span></span>
         <span class="bfb-mini-arrow">›</span>
       </a>
       <a href="/tags#hormones" class="bfb-mini-card">
         <span class="bfb-mini-icon">🌸</span>
-        <span><span class="bfb-mini-title">Hormonal Health</span><span class="bfb-mini-sub">Cycles, perimenopause and thyroid</span></span>
+        <span style="display:flex;flex-direction:column;gap:2px;"><span class="bfb-mini-title">Hormonal Health</span><span class="bfb-mini-sub">Cycles, perimenopause and thyroid</span></span>
         <span class="bfb-mini-arrow">›</span>
       </a>
       <a href="/tags#nutrition" class="bfb-mini-card">
         <span class="bfb-mini-icon">🥗</span>
-        <span><span class="bfb-mini-title">Nutrition for Women</span><span class="bfb-mini-sub">Energy, skin health and longevity</span></span>
+        <span style="display:flex;flex-direction:column;gap:2px;"><span class="bfb-mini-title">Nutrition for Women</span><span class="bfb-mini-sub">Energy, skin health and longevity</span></span>
         <span class="bfb-mini-arrow">›</span>
       </a>
       <a href="/tags#weight-management" class="bfb-mini-card">
         <span class="bfb-mini-icon">⚖️</span>
-        <span><span class="bfb-mini-title">Weight and Metabolism</span><span class="bfb-mini-sub">What the research supports</span></span>
+        <span style="display:flex;flex-direction:column;gap:2px;"><span class="bfb-mini-title">Weight and Metabolism</span><span class="bfb-mini-sub">What the research supports</span></span>
         <span class="bfb-mini-arrow">›</span>
       </a>
       <a href="/tags#prevention" class="bfb-mini-card">
         <span class="bfb-mini-icon">🛡️</span>
-        <span><span class="bfb-mini-title">Disease Prevention</span><span class="bfb-mini-sub">Screenings and habits that matter</span></span>
+        <span style="display:flex;flex-direction:column;gap:2px;"><span class="bfb-mini-title">Disease Prevention</span><span class="bfb-mini-sub">Screenings and habits that matter</span></span>
         <span class="bfb-mini-arrow">›</span>
       </a>
     </div>

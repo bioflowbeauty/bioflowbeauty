@@ -13,7 +13,7 @@ cover-img: false
 .bfb-magazine-hero {
   position: relative; overflow: hidden;
   margin: -1rem -1rem 0;
-  min-height: 380px;
+  min-height: 280px;
   display: flex; align-items: stretch;
 }
 #bfb-canvas {
@@ -23,13 +23,13 @@ cover-img: false
 }
 .bfb-hero-left {
   flex: 1.2; background: linear-gradient(160deg, #8b3a5a 0%, #6b2040 100%);
-  padding: 3rem 2.5rem; display: flex; flex-direction: column;
+  padding: 1.8rem 2.5rem; display: flex; flex-direction: column;
   justify-content: center; position: relative; z-index: 1;
 }
 .bfb-hero-right {
   flex: 1; background: linear-gradient(160deg, #f9eef4 0%, #fdf0ea 100%);
   display: flex; flex-direction: column; justify-content: center;
-  padding: 2rem 2rem 2rem 1.5rem; position: relative; z-index: 1;
+  padding: 1.2rem 1.5rem 1.2rem 1.2rem; position: relative; z-index: 1;
 }
 .bfb-mag-label {
   font-family: 'Jost', sans-serif;
@@ -45,8 +45,8 @@ cover-img: false
 .bfb-mag-title em { font-style: italic; color: #f5c8a0; }
 .bfb-mag-desc {
   font-family: 'Jost', sans-serif;
-  font-size: 0.88rem; font-weight: 300;
-  color: #f0d0dc; line-height: 1.7; margin: 0 0 1.8rem;
+  font-size: 0.85rem; font-weight: 300;
+  color: #f0d0dc; line-height: 1.6; margin: 0 0 1rem;
 }
 .bfb-mag-btn {
   display: inline-block; align-self: flex-start;
@@ -207,7 +207,7 @@ cover-img: false
   <canvas id="bfb-canvas"></canvas>
 
   <div class="bfb-hero-left">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="130" height="130" style="display:block;margin-bottom:1.2rem;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="90" height="90" style="display:block;margin-bottom:0.8rem;">
       <defs>
         <style>
           .h-f1{transform-origin:70px 70px;animation:h-sf1 24s linear infinite}
@@ -294,27 +294,27 @@ cover-img: false
     <div class="bfb-mini-cards">
       <a href="/tags#skincare" class="bfb-mini-card">
         <span class="bfb-mini-icon">✨</span>
-        <span><p class="bfb-mini-title">Skin and Beauty</p><p class="bfb-mini-sub">Ingredients and treatments that work</p></span>
+        <span><span class="bfb-mini-title">Skin and Beauty</span><span class="bfb-mini-sub">Ingredients and treatments that work</span></span>
         <span class="bfb-mini-arrow">›</span>
       </a>
       <a href="/tags#hormones" class="bfb-mini-card">
         <span class="bfb-mini-icon">🌸</span>
-        <span><p class="bfb-mini-title">Hormonal Health</p><p class="bfb-mini-sub">Cycles, perimenopause and thyroid</p></span>
+        <span><span class="bfb-mini-title">Hormonal Health</span><span class="bfb-mini-sub">Cycles, perimenopause and thyroid</span></span>
         <span class="bfb-mini-arrow">›</span>
       </a>
       <a href="/tags#nutrition" class="bfb-mini-card">
         <span class="bfb-mini-icon">🥗</span>
-        <span><p class="bfb-mini-title">Nutrition for Women</p><p class="bfb-mini-sub">Energy, skin health and longevity</p></span>
+        <span><span class="bfb-mini-title">Nutrition for Women</span><span class="bfb-mini-sub">Energy, skin health and longevity</span></span>
         <span class="bfb-mini-arrow">›</span>
       </a>
       <a href="/tags#weight-management" class="bfb-mini-card">
         <span class="bfb-mini-icon">⚖️</span>
-        <span><p class="bfb-mini-title">Weight and Metabolism</p><p class="bfb-mini-sub">What the research supports</p></span>
+        <span><span class="bfb-mini-title">Weight and Metabolism</span><span class="bfb-mini-sub">What the research supports</span></span>
         <span class="bfb-mini-arrow">›</span>
       </a>
       <a href="/tags#prevention" class="bfb-mini-card">
         <span class="bfb-mini-icon">🛡️</span>
-        <span><p class="bfb-mini-title">Disease Prevention</p><p class="bfb-mini-sub">Screenings and habits that matter</p></span>
+        <span><span class="bfb-mini-title">Disease Prevention</span><span class="bfb-mini-sub">Screenings and habits that matter</span></span>
         <span class="bfb-mini-arrow">›</span>
       </a>
     </div>

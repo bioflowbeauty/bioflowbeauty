@@ -2,11 +2,11 @@
 layout: post
 title: "5 Science-Backed Health Habits Every Woman Should Know"
 subtitle: "A biomedical scientist's guide to the changes that actually move the needle"
-date: 2026-05-21
+date: 2026-04-28
 tags: [women's-health, nutrition, sleep, stress, prevention, evidence-based]
 description: "A biomedical scientist reviews the five health habits with the strongest evidence for women: sleep quality, nutrition foundations, stress regulation, movement, and preventive screening."
 thumbnail-img: /assets/img/posts/women-health-habits-hero.webp
-permalink: /2026-05-21-5-science-backed-health-habits-for-women/
+permalink: /2026-04-28-5-science-backed-health-habits-for-women/
 ---
 
 There is no shortage of health advice aimed at women. The problem is that most of it is driven by trends, marketing, or anecdote rather than evidence. After years working in biomedical research, I have come to appreciate how much difference a small number of well-chosen habits can make and how much noise can be safely ignored.

@@ -2,11 +2,11 @@
 layout: post
 title: "Weight Management for Women: What the Research Actually Supports"
 subtitle: "Beyond calorie counting — a biomedical scientist reviews the evidence on metabolism, body composition, and sustainable approaches"
-date: 2026-05-21
+date: 2026-05-16
 tags: [weight-management, metabolism, women's-health, nutrition, evidence-based]
 description: "A biomedical scientist reviews the evidence on weight management for women, covering metabolic differences, the limitations of calorie restriction, the role of muscle mass, hormonal influences, and what approaches are most supported by research."
 thumbnail-img: /assets/img/posts/weight-management-hero.webp
-permalink: /2026-05-21-weight-management-for-women/
+permalink: /2026-05-16-weight-management-for-women/
 ---
 
 Weight management is one of the most commercially saturated topics in health, and one of the most poorly communicated. The gap between what the research shows and what gets marketed as a solution is wider here than almost anywhere else in the wellness space.

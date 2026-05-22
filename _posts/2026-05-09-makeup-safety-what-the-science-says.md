@@ -2,11 +2,11 @@
 layout: post
 title: "Makeup Safety: What the Science Says About Common Cosmetic Ingredients"
 subtitle: "A biomedical scientist reviews the ingredients worth paying attention to — and the ones that are not worth the concern"
-date: 2026-05-21
+date: 2026-05-09
 tags: [makeup, skincare, safety, hormones, evidence-based]
 description: "A biomedical scientist reviews the evidence on cosmetic ingredient safety, including parabens, PFAS, fragrances, and heavy metals, helping women make more informed choices about the products they use daily."
 thumbnail-img: /assets/img/posts/makeup-safety-hero.webp
-permalink: /2026-05-21-makeup-safety-what-the-science-says/
+permalink: /2026-05-09-makeup-safety-what-the-science-says/
 ---
 
 The average woman applies over 10 personal care products before leaving the house in the morning, exposing herself to hundreds of distinct chemical compounds. Most of these are safe. Some warrant genuine attention. And the challenge for anyone trying to make informed decisions is that online discourse tends to swing between dismissing all concerns as fearmongering or treating every synthetic ingredient as an urgent threat.

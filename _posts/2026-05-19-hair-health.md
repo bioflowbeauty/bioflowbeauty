@@ -2,11 +2,11 @@
 layout: post
 title: "Hair Health: The Biology of Growth, Loss, and What the Evidence Supports"
 subtitle: "From the hair follicle cycle to tinting and heat damage — a biomedical scientist reviews what actually affects your hair"
-date: 2026-05-21
+date: 2026-05-19
 tags: [hair, women's-health, nutrition, hormones, evidence-based]
 description: "A biomedical scientist explains the biology of hair growth and loss in women, covering the follicle cycle, hormonal and nutritional causes of hair loss, the evidence on treatments, and the science behind hair dye and heat damage."
 thumbnail-img: /assets/img/posts/hair-health-hero.webp
-permalink: /2026-05-21-hair-health/
+permalink: /2026-05-19-hair-health/
 ---
 
 Hair holds a significant place in how many women experience their identity and wellbeing, which makes it a topic where misinformation causes genuine distress. Understanding the biology of hair — how it grows, why it falls out, and what actually affects its health — provides a more rational foundation for making decisions about care and treatment.

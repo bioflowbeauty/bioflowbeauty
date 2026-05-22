@@ -2,11 +2,11 @@
 layout: post
 title: "Nutrition for Women: What the Evidence Actually Says"
 subtitle: "Protein, micronutrients, and dietary patterns — a biomedical scientist reviews what matters most"
-date: 2026-05-21
+date: 2026-05-13
 tags: [nutrition, women's-health, protein, vitamins, evidence-based]
 description: "A biomedical scientist reviews the nutritional needs specific to women across different life stages, covering protein intake, key micronutrients like iron and magnesium, and the dietary patterns with the strongest evidence for long-term health."
 thumbnail-img: /assets/img/posts/nutrition-women-hero.webp
-permalink: /2026-05-21-nutrition-for-women/
+permalink: /2026-05-13-nutrition-for-women/
 ---
 
 Nutrition advice for women is one of the most cluttered corners of the wellness space. Calorie restriction, elimination diets, superfoods, detoxes, and supplement stacks compete for attention in an environment where almost every claim comes with a product attached.

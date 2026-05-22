@@ -287,7 +287,7 @@ cover-img: false
     <p class="bfb-mag-label">Evidence-Based Beauty and Women's Health</p>
     <h1 class="bfb-mag-title">Real beauty<br>starts <em>within</em></h1>
     <p class="bfb-mag-desc">Science-based insights on skincare, hormonal health, nutrition and wellness. Written by a biomedical scientist. No trends. No hype. Just what the research actually says.</p>
-    <a href="/2026-05-21-5-science-backed-health-habits-for-women/" class="bfb-mag-btn">Start Reading</a>
+    <a href="/2026-04-28-5-science-backed-health-habits-for-women/" class="bfb-mag-btn">Start Reading</a>
   </div>
 
   <div class="bfb-hero-right">
@@ -328,17 +328,17 @@ cover-img: false
     <p class="bfb-band-title">Science First</p>
     <p class="bfb-band-desc">Peer-reviewed research only</p>
   </a>
-  <a href="/2026-05-21-skincare-science-what-actually-works/" class="bfb-band-item" style="text-decoration:none;">
+  <a href="/2026-05-02-skincare-science-what-actually-works/" class="bfb-band-item" style="text-decoration:none;">
     <div class="bfb-band-icon">🌿</div>
     <p class="bfb-band-title">Natural Beauty</p>
     <p class="bfb-band-desc">Health from the inside out</p>
   </a>
-  <a href="/2026-05-21-hormonal-health-women-what-the-science-says/" class="bfb-band-item" style="text-decoration:none;">
+  <a href="/2026-05-06-hormonal-health-women-what-the-science-says/" class="bfb-band-item" style="text-decoration:none;">
     <div class="bfb-band-icon">🕊️</div>
     <p class="bfb-band-title">Inner Peace</p>
     <p class="bfb-band-desc">Hormones, stress and sleep</p>
   </a>
-  <a href="/2026-05-21-5-science-backed-health-habits-for-women/" class="bfb-band-item" style="text-decoration:none;">
+  <a href="/2026-04-28-5-science-backed-health-habits-for-women/" class="bfb-band-item" style="text-decoration:none;">
     <div class="bfb-band-icon">✦</div>
     <p class="bfb-band-title">Your Purpose</p>
     <p class="bfb-band-desc">Feeling well is your foundation</p>
@@ -350,20 +350,20 @@ cover-img: false
   <div class="bfb-story-main">
     <p class="bfb-story-label">Start Here</p>
     <p class="bfb-story-title">5 Science-Backed Health Habits Every Woman Should Know</p>
-    <a href="/2026-05-21-5-science-backed-health-habits-for-women/" class="bfb-story-btn">Read now</a>
+    <a href="/2026-04-28-5-science-backed-health-habits-for-women/" class="bfb-story-btn">Read now</a>
   </div>
   <div class="bfb-story-side">
-    <a href="/2026-05-21-skincare-science-what-actually-works/" class="bfb-story-card">
+    <a href="/2026-05-02-skincare-science-what-actually-works/" class="bfb-story-card">
       <div class="bfb-story-card-icon">✨</div>
       <p class="bfb-story-card-title">Skincare Science: What Actually Works</p>
       <p class="bfb-story-card-desc">Retinoids, niacinamide, alpha lipoic acid and the evidence behind them</p>
     </a>
-    <a href="/2026-05-21-hormonal-health-women-what-the-science-says/" class="bfb-story-card">
+    <a href="/2026-05-06-hormonal-health-women-what-the-science-says/" class="bfb-story-card">
       <div class="bfb-story-card-icon">🌸</div>
       <p class="bfb-story-card-title">Hormonal Health Across the Lifespan</p>
       <p class="bfb-story-card-desc">Cycles, PMS, perimenopause and what the science actually supports</p>
     </a>
-    <a href="/2026-05-21-makeup-safety-what-the-science-says/" class="bfb-story-card">
+    <a href="/2026-05-09-makeup-safety-what-the-science-says/" class="bfb-story-card">
       <div class="bfb-story-card-icon">💄</div>
       <p class="bfb-story-card-title">Makeup Safety: What You Should Know</p>
       <p class="bfb-story-card-desc">PFAS, parabens, heavy metals and how to make informed choices</p>

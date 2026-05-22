@@ -2,11 +2,11 @@
 layout: post
 title: "Skincare Science: What Actually Works for Healthy, Clear Skin"
 subtitle: "From alpha lipoic acid to retinoids — a biomedical scientist reviews the evidence"
-date: 2026-05-21
+date: 2026-05-02
 tags: [skincare, acne, anti-aging, evidence-based, skin-barrier]
 description: "A biomedical scientist breaks down the skincare ingredients and treatments with the strongest scientific evidence, including retinoids, alpha lipoic acid, niacinamide, and what the research actually says about chemical peels and microneedling."
 thumbnail-img: /assets/img/posts/skincare-science-hero.webp
-permalink: /2026-05-21-skincare-science-what-actually-works/
+permalink: /2026-05-02-skincare-science-what-actually-works/
 ---
 
 The skincare industry generates over 150 billion dollars annually and operates in a regulatory environment that allows extraordinary claims to be made with minimal evidence. For every ingredient backed by solid clinical research, there are dozens riding on marketing, celebrity endorsement, or studies so small and poorly designed that they tell us almost nothing.

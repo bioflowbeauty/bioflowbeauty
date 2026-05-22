@@ -1,14 +1,5 @@
 /* =====================================================
-   BioFlowBeauty Effects
-   1. Navbar scroll shadow
-   2. Cursor dot rosé
-   3. Post reveal on scroll
-   4. Reading progress bar
-   5. Back to top button
-   6. Glow rosé no click/tap
-   7. Rastro de partículas no drag
-   8. Redes sociais do footer em nova aba
-   9. Botão de email redireciona para página de contato
+   BioFlowBeauty Effects — versão com pétalas suaves
    ===================================================== */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -21,17 +12,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 2. Cursor dot rosé
-  var cursor = document.createElement('div');
-  cursor.id = 'beauty-cursor';
-  cursor.style.cssText = 'position:fixed;width:22px;height:22px;background:radial-gradient(circle,rgba(201,149,108,0.30) 0%,rgba(201,149,108,0) 70%);border-radius:50%;pointer-events:none;z-index:99999;transition:transform 0.12s ease,opacity 0.4s ease;opacity:0;';
-  document.body.appendChild(cursor);
-  document.addEventListener('mousemove', function(e){ cursor.style.left=e.clientX-11+'px'; cursor.style.top=e.clientY-11+'px'; cursor.style.opacity='1'; });
-  document.addEventListener('mouseleave', function(){ cursor.style.opacity='0'; });
-  document.querySelectorAll('a,button,.btn').forEach(function(el){
-    el.addEventListener('mouseenter',function(){ cursor.style.transform='scale(2)'; cursor.style.opacity='0.7'; });
-    el.addEventListener('mouseleave',function(){ cursor.style.transform='scale(1)'; cursor.style.opacity='1'; });
-  });
+  // 2. Cursor dot rosé (apenas desktop)
+  if (window.innerWidth > 768) {
+    var cursor = document.createElement('div');
+    cursor.id = 'beauty-cursor';
+    cursor.style.cssText = 'position:fixed;width:22px;height:22px;background:radial-gradient(circle,rgba(201,149,108,0.30) 0%,rgba(201,149,108,0) 70%);border-radius:50%;pointer-events:none;z-index:99999;transition:transform 0.12s ease,opacity 0.4s ease;opacity:0;';
+    document.body.appendChild(cursor);
+    document.addEventListener('mousemove', function(e){ cursor.style.left=e.clientX-11+'px'; cursor.style.top=e.clientY-11+'px'; cursor.style.opacity='1'; });
+    document.addEventListener('mouseleave', function(){ cursor.style.opacity='0'; });
+    document.querySelectorAll('a,button,.btn').forEach(function(el){
+      el.addEventListener('mouseenter',function(){ cursor.style.transform='scale(2)'; cursor.style.opacity='0.7'; });
+      el.addEventListener('mouseleave',function(){ cursor.style.transform='scale(1)'; cursor.style.opacity='1'; });
+    });
+  }
 
   // 3. Post reveal on scroll
   var posts = document.querySelectorAll('.post-preview');
@@ -110,7 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /* =====================================================
-   6 + 7. Canvas: Glow rosé no click + Rastro no drag
+   Pétalas suaves — rastro delicado no toque e mouse
+   Funciona bem em mobile e desktop
    ===================================================== */
 (function(){
 
@@ -123,77 +117,68 @@ document.addEventListener('DOMContentLoaded', function () {
   resize();
   window.addEventListener('resize', resize);
 
-  var glows = [];
-  function spawnGlow(x, y) {
-    glows.push({ x: x, y: y, r: 0, alpha: 1 });
+  var petals = [];
+  var animId = null;
+
+  // Forma de pétala suave usando bezier
+  function drawPetal(ctx, x, y, size, angle, alpha, hue) {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(angle);
+    ctx.globalAlpha = alpha;
+    ctx.beginPath();
+    // pétala oval alongada
+    ctx.ellipse(0, 0, size * 0.4, size, 0, 0, Math.PI * 2);
+    var grad = ctx.createRadialGradient(0, -size*0.3, 0, 0, 0, size);
+    grad.addColorStop(0, 'hsla('+hue+',65%,80%,1)');
+    grad.addColorStop(1, 'hsla('+hue+',55%,70%,0)');
+    ctx.fillStyle = grad;
+    ctx.fill();
+    ctx.restore();
   }
 
-  var trail = [];
-  var dragging = false;
-
-  function spawnTrail(x, y) {
-    for (var i = 0; i < 3; i++) {
-      trail.push({
-        x: x + (Math.random()-0.5)*6,
-        y: y + (Math.random()-0.5)*6,
-        vx: (Math.random()-0.5)*1.2,
-        vy: (Math.random()-0.5)*1.2,
-        size: 1.5 + Math.random()*3,
-        alpha: 0.7 + Math.random()*0.3,
+  function spawnPetals(x, y, count) {
+    count = count || 3;
+    for (var i = 0; i < count; i++) {
+      petals.push({
+        x: x + (Math.random()-0.5) * 12,
+        y: y + (Math.random()-0.5) * 12,
+        vx: (Math.random()-0.5) * 0.8,
+        vy: -0.4 - Math.random() * 0.8, // sobe devagar
+        size: 4 + Math.random() * 7,
+        angle: Math.random() * Math.PI * 2,
+        vAngle: (Math.random()-0.5) * 0.04, // rotação lenta
+        alpha: 0.6 + Math.random() * 0.3,
         life: 1.0,
-        decay: 0.025 + Math.random()*0.02,
-        hue: 340 + Math.random()*30
+        decay: 0.008 + Math.random() * 0.006, // decai muito devagar
+        hue: Math.random() > 0.6 ? 340 : (Math.random() > 0.5 ? 20 : 355), // rosé, dourado, rosa
+        drift: (Math.random()-0.5) * 0.01 // deriva suave
       });
     }
   }
-
-  var animId = null;
 
   function loop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     var alive = false;
 
-    glows = glows.filter(function(g){
-      g.r   += 4;
-      g.alpha -= 0.032;
-      if (g.alpha <= 0) return false;
+    petals = petals.filter(function(p){
+      p.life -= p.decay;
+      if (p.life <= 0) return false;
       alive = true;
-      ctx.beginPath();
-      ctx.arc(g.x, g.y, g.r, 0, Math.PI*2);
-      ctx.strokeStyle = 'rgba(201,149,108,' + g.alpha * 0.6 + ')';
-      ctx.lineWidth = 2;
-      ctx.shadowColor = 'rgba(201,149,108,0.8)';
-      ctx.shadowBlur = 18;
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.arc(g.x, g.y, g.r * 0.5, 0, Math.PI*2);
-      ctx.strokeStyle = 'rgba(245,220,200,' + g.alpha * 0.4 + ')';
-      ctx.lineWidth = 1;
-      ctx.shadowBlur = 10;
-      ctx.stroke();
-      ctx.shadowBlur = 0;
-      return true;
-    });
 
-    trail = trail.filter(function(p){
-      p.life  -= p.decay;
-      p.x     += p.vx;
-      p.y     += p.vy;
-      p.size  *= 0.97;
-      if (p.life <= 0 || p.size < 0.3) return false;
-      alive = true;
+      // movimento suave ondulante
+      p.vx += p.drift;
+      p.vy += 0.01; // leve gravidade
+      p.x += p.vx;
+      p.y += p.vy;
+      p.angle += p.vAngle;
+
       var a = p.alpha * p.life;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI*2);
-      ctx.fillStyle = 'hsla(' + p.hue + ',60%,65%,' + a + ')';
-      ctx.shadowColor = 'hsla(' + p.hue + ',70%,70%,' + a*0.6 + ')';
-      ctx.shadowBlur = 8;
-      ctx.fill();
-      ctx.shadowBlur = 0;
+      drawPetal(ctx, p.x, p.y, p.size * p.life, p.angle, a, p.hue);
       return true;
     });
 
-    if (alive || dragging) {
+    if (alive) {
       animId = requestAnimationFrame(loop);
     } else {
       animId = null;
@@ -204,29 +189,47 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!animId) animId = requestAnimationFrame(loop);
   }
 
-  document.addEventListener('mousedown', function(){ dragging = true; });
-  document.addEventListener('mouseup',   function(){ dragging = false; });
-
-  document.addEventListener('click', function(e){
-    spawnGlow(e.clientX, e.clientY);
-    startLoop();
-  });
-
+  // Mouse move — rastro suave apenas quando movendo devagar
+  var lastX = 0, lastY = 0;
   document.addEventListener('mousemove', function(e){
-    if (!dragging) return;
-    spawnTrail(e.clientX, e.clientY);
+    var dx = e.clientX - lastX;
+    var dy = e.clientY - lastY;
+    var speed = Math.sqrt(dx*dx + dy*dy);
+    // só spawna se o mouse estiver se movendo devagar (rastro delicado)
+    if (speed < 20) {
+      if (Math.random() < 0.3) { // nem todo frame
+        spawnPetals(e.clientX, e.clientY, 1);
+        startLoop();
+      }
+    }
+    lastX = e.clientX;
+    lastY = e.clientY;
+  });
+
+  // Click — buquê de pétalas
+  document.addEventListener('click', function(e){
+    spawnPetals(e.clientX, e.clientY, 6);
     startLoop();
   });
+
+  // Touch — rastro de pétalas suave no mobile
+  var lastTouchX = 0, lastTouchY = 0;
+  document.addEventListener('touchmove', function(e){
+    var t = e.touches[0];
+    var dx = t.clientX - lastTouchX;
+    var dy = t.clientY - lastTouchY;
+    var speed = Math.sqrt(dx*dx + dy*dy);
+    if (speed < 30 && Math.random() < 0.4) {
+      spawnPetals(t.clientX, t.clientY, 2);
+      startLoop();
+    }
+    lastTouchX = t.clientX;
+    lastTouchY = t.clientY;
+  }, { passive: true });
 
   document.addEventListener('touchstart', function(e){
     var t = e.touches[0];
-    spawnGlow(t.clientX, t.clientY);
-    startLoop();
-  }, { passive: true });
-
-  document.addEventListener('touchmove', function(e){
-    var t = e.touches[0];
-    spawnTrail(t.clientX, t.clientY);
+    spawnPetals(t.clientX, t.clientY, 4);
     startLoop();
   }, { passive: true });
 

@@ -205,7 +205,83 @@ cover-img: false
   <canvas id="bfb-canvas"></canvas>
 
   <div class="bfb-hero-left">
-    <img src="/assets/img/bioflowbeauty-logo.png" alt="BioFlowBeauty" class="bfb-hero-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="130" height="130" style="display:block;margin-bottom:1.2rem;">
+      <defs>
+        <style>
+          .h-f1{transform-origin:70px 70px;animation:h-sf1 24s linear infinite}
+          .h-f2{transform-origin:70px 70px;animation:h-sf1 34s linear infinite reverse}
+          .h-f3{transform-origin:70px 70px;animation:h-sf1 14s linear infinite}
+          @keyframes h-sf1{100%{transform:rotate(360deg)}}
+          .h-gp{animation:h-gpa 4s ease-in-out infinite}
+          @keyframes h-gpa{0%,100%{opacity:0.2}50%{opacity:0.75}}
+          .h-cp{animation:h-cpa 3.2s ease-in-out infinite}
+          @keyframes h-cpa{0%,100%{opacity:0.4}50%{opacity:1}}
+        </style>
+        <radialGradient id="h-coreG" cx="42%" cy="38%" r="60%">
+          <stop offset="0%" stop-color="#fff8ee"/>
+          <stop offset="45%" stop-color="#f0b87a"/>
+          <stop offset="100%" stop-color="#c07040"/>
+        </radialGradient>
+        <radialGradient id="h-glowG" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#f5c8a0" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#8b3a5a" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="h-fo" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#f5c8a0" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#fff0e8" stop-opacity="0.4"/>
+        </linearGradient>
+        <linearGradient id="h-fm" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#f0b880" stop-opacity="0.85"/>
+          <stop offset="100%" stop-color="#fff0e8" stop-opacity="0.2"/>
+        </linearGradient>
+        <linearGradient id="h-fi" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#ffe0c0" stop-opacity="0.7"/>
+          <stop offset="100%" stop-color="#fff8ee" stop-opacity="0.1"/>
+        </linearGradient>
+      </defs>
+      <circle cx="70" cy="70" r="64" fill="url(#h-glowG)" class="h-gp"/>
+      <g class="h-f1" fill="url(#h-fo)">
+        <path d="M70,8 C75,17 77,30 70,36 C63,30 65,17 70,8Z"/>
+        <path d="M70,8 C76,19 75,32 70,36 C65,30 64,18 70,8Z" transform="rotate(30,70,70)"/>
+        <path d="M70,9 C74,18 78,29 70,37 C62,29 66,18 70,9Z" transform="rotate(60,70,70)"/>
+        <path d="M70,7 C75,16 76,31 70,35 C64,29 65,16 70,7Z" transform="rotate(90,70,70)"/>
+        <path d="M70,9 C76,20 74,33 70,37 C66,31 64,19 70,9Z" transform="rotate(120,70,70)"/>
+        <path d="M70,8 C74,17 77,28 70,36 C63,28 66,17 70,8Z" transform="rotate(150,70,70)"/>
+        <path d="M70,7 C75,18 76,30 70,35 C64,28 65,17 70,7Z" transform="rotate(180,70,70)"/>
+        <path d="M70,9 C77,20 75,31 70,37 C65,29 63,18 70,9Z" transform="rotate(210,70,70)"/>
+        <path d="M70,8 C74,17 78,28 70,36 C62,28 66,17 70,8Z" transform="rotate(240,70,70)"/>
+        <path d="M70,9 C75,19 76,32 70,36 C64,30 65,18 70,9Z" transform="rotate(270,70,70)"/>
+        <path d="M70,7 C76,18 75,30 70,35 C65,28 64,17 70,7Z" transform="rotate(300,70,70)"/>
+        <path d="M70,9 C74,20 77,31 70,37 C63,29 66,19 70,9Z" transform="rotate(330,70,70)"/>
+      </g>
+      <g class="h-f2" fill="url(#h-fm)">
+        <path d="M70,20 C74,27 75,37 70,42 C65,35 66,26 70,20Z" transform="rotate(15,70,70)"/>
+        <path d="M70,19 C75,28 73,38 70,42 C67,36 65,27 70,19Z" transform="rotate(45,70,70)"/>
+        <path d="M70,21 C73,29 76,37 70,43 C64,35 67,27 70,21Z" transform="rotate(75,70,70)"/>
+        <path d="M70,20 C74,28 74,38 70,42 C66,36 66,27 70,20Z" transform="rotate(105,70,70)"/>
+        <path d="M70,19 C75,27 75,37 70,41 C65,35 65,26 70,19Z" transform="rotate(135,70,70)"/>
+        <path d="M70,21 C73,28 76,38 70,43 C64,36 67,27 70,21Z" transform="rotate(165,70,70)"/>
+        <path d="M70,20 C74,27 75,37 70,42 C65,35 66,26 70,20Z" transform="rotate(195,70,70)"/>
+        <path d="M70,19 C75,28 74,38 70,42 C66,36 65,27 70,19Z" transform="rotate(225,70,70)"/>
+        <path d="M70,21 C73,29 75,37 70,43 C65,35 67,28 70,21Z" transform="rotate(255,70,70)"/>
+        <path d="M70,20 C74,28 76,38 70,42 C64,36 66,27 70,20Z" transform="rotate(285,70,70)"/>
+        <path d="M70,19 C75,27 73,37 70,41 C67,35 65,26 70,19Z" transform="rotate(315,70,70)"/>
+        <path d="M70,21 C73,28 75,38 70,43 C65,36 67,27 70,21Z" transform="rotate(345,70,70)"/>
+      </g>
+      <g class="h-f3" fill="url(#h-fi)">
+        <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(10,70,70)"/>
+        <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(50,70,70)"/>
+        <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(90,70,70)"/>
+        <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(130,70,70)"/>
+        <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(170,70,70)"/>
+        <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(210,70,70)"/>
+        <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(250,70,70)"/>
+        <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(290,70,70)"/>
+        <path d="M70,30 C72,34 73,41 70,44 C67,40 68,33 70,30Z" transform="rotate(330,70,70)"/>
+      </g>
+      <circle cx="70" cy="70" r="26" fill="url(#h-coreG)"/>
+      <circle cx="70" cy="70" r="11" fill="#fff8ee" class="h-cp"/>
+    </svg>
     <p class="bfb-mag-label">Evidence-Based Beauty and Women's Health</p>
     <h1 class="bfb-mag-title">Real beauty<br>starts <em>within</em></h1>
     <p class="bfb-mag-desc">Science-based insights on skincare, hormonal health, nutrition and wellness. Written by a biomedical scientist. No trends. No hype. Just what the research actually says.</p>

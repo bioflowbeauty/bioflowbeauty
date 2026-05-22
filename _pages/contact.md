@@ -59,7 +59,7 @@ Whether you have a question about something covered on BioFlowBeauty, a topic yo
 }
 </style>
 
-<form action="https://formspree.io/f/XXXXXXXX" method="POST" class="bfb-contact-form">
+<form action="https://formspree.io/f/mlgvbvvl" method="POST" class="bfb-contact-form">
   <div class="bfb-form-group">
     <label class="bfb-form-label" for="name">Your name</label>
     <input type="text" name="name" id="name" class="bfb-form-input" placeholder="Your name" required>

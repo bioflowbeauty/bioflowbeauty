@@ -176,6 +176,12 @@ cover-img: false
   margin-bottom: 1.4rem; padding-bottom: 1.4rem;
   border-bottom: 1px solid #f9eef4;
 }
+.bfb-post-item img {
+  transition: transform 0.2s ease;
+}
+.bfb-post-item img:hover {
+  transform: scale(1.04);
+}
 .bfb-post-num {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2rem; font-weight: 400; color: #f0d8e2;
@@ -379,10 +385,15 @@ cover-img: false
 {% for post in site.posts %}
 <div class="bfb-post-item">
   <span class="bfb-post-num">{{ counter }}</span>
+  {% if post.thumbnail-img %}
+  <a href="{{ post.url }}" style="flex-shrink:0;">
+    <img src="{{ post.thumbnail-img }}" alt="{{ post.title }}" style="width:90px;height:65px;object-fit:cover;border-radius:8px;display:block;">
+  </a>
+  {% endif %}
   <div class="bfb-post-content">
     <a href="{{ post.url }}" class="bfb-post-link">{{ post.title }}</a>
     <p class="bfb-post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
-    <p class="bfb-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+    <p class="bfb-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
   </div>
 </div>
 {% assign counter = counter | plus: 1 %}

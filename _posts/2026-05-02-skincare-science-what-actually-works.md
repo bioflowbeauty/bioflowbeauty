@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Skincare Science: What Actually Works for Healthy, Clear Skin"
-subtitle: "From alpha lipoic acid to retinoids — a biomedical scientist reviews the evidence"
+subtitle: "From retinoids to alpha lipoic acid, here is what the evidence actually supports"
 date: 2026-05-02
 tags: [skincare, acne, anti-aging, evidence-based, skin-barrier]
 description: "A biomedical scientist breaks down the skincare ingredients and treatments with the strongest scientific evidence, including retinoids, alpha lipoic acid, niacinamide, and what the research actually says about chemical peels and microneedling."
+cover-img: /assets/img/posts/skincare-science-hero.webp
 thumbnail-img: /assets/img/posts/skincare-science-hero.webp
 permalink: /2026-05-02-skincare-science-what-actually-works/
 ---

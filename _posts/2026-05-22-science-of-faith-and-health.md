@@ -5,6 +5,7 @@ subtitle: "What the research actually shows about prayer, community, purpose and
 date: 2026-05-22
 tags: [wellness, mental-health, stress, prevention, evidence-based]
 description: "A biomedical scientist reviews the growing body of research on how spiritual practice, faith, and the teachings of Jesus on purpose and inner peace connect with measurable health outcomes."
+cover-img: /assets/img/posts/spirituality-health-hero.webp
 thumbnail-img: /assets/img/posts/spirituality-health-hero.webp
 permalink: /2026-05-22-science-of-faith-and-health/
 ---

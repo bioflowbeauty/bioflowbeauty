@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Hair Health: The Biology of Growth, Loss, and What the Evidence Supports"
-subtitle: "From the hair follicle cycle to tinting and heat damage — a biomedical scientist reviews what actually affects your hair"
+subtitle: "From the follicle cycle to heat damage and hair dye. What the research actually says"
 date: 2026-05-19
 tags: [hair, women's-health, nutrition, hormones, evidence-based]
 description: "A biomedical scientist explains the biology of hair growth and loss in women, covering the follicle cycle, hormonal and nutritional causes of hair loss, the evidence on treatments, and the science behind hair dye and heat damage."
+cover-img: /assets/img/posts/hair-health-hero.webp
 thumbnail-img: /assets/img/posts/hair-health-hero.webp
 permalink: /2026-05-19-hair-health/
 ---

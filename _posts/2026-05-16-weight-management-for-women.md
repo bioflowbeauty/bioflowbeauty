@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Weight Management for Women: What the Research Actually Supports"
-subtitle: "Beyond calorie counting — a biomedical scientist reviews the evidence on metabolism, body composition, and sustainable approaches"
+subtitle: "Beyond calorie counting. What the evidence actually says about metabolism, body composition, and sustainable approaches"
 date: 2026-05-16
 tags: [weight-management, metabolism, women's-health, nutrition, evidence-based]
 description: "A biomedical scientist reviews the evidence on weight management for women, covering metabolic differences, the limitations of calorie restriction, the role of muscle mass, hormonal influences, and what approaches are most supported by research."
+cover-img: /assets/img/posts/weight-management-hero.webp
 thumbnail-img: /assets/img/posts/weight-management-hero.webp
 permalink: /2026-05-16-weight-management-for-women/
 ---

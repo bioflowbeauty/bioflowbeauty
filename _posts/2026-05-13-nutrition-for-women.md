@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Nutrition for Women: What the Evidence Actually Says"
-subtitle: "Protein, micronutrients, and dietary patterns — a biomedical scientist reviews what matters most"
+subtitle: "Protein, micronutrients, and dietary patterns. A biomedical scientist reviews what matters most"
 date: 2026-05-13
 tags: [nutrition, women's-health, protein, vitamins, evidence-based]
 description: "A biomedical scientist reviews the nutritional needs specific to women across different life stages, covering protein intake, key micronutrients like iron and magnesium, and the dietary patterns with the strongest evidence for long-term health."
+cover-img: /assets/img/posts/nutrition-women-hero.webp
 thumbnail-img: /assets/img/posts/nutrition-women-hero.webp
 permalink: /2026-05-13-nutrition-for-women/
 ---

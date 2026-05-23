@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Makeup Safety: What the Science Says About Common Cosmetic Ingredients"
-subtitle: "A biomedical scientist reviews the ingredients worth paying attention to — and the ones that are not worth the concern"
+subtitle: "A biomedical scientist reviews the ingredients worth paying attention to and the ones that are not worth the concern"
 date: 2026-05-09
 tags: [makeup, skincare, safety, hormones, evidence-based]
 description: "A biomedical scientist reviews the evidence on cosmetic ingredient safety, including parabens, PFAS, fragrances, and heavy metals, helping women make more informed choices about the products they use daily."
+cover-img: /assets/img/posts/makeup-safety-hero.webp
 thumbnail-img: /assets/img/posts/makeup-safety-hero.webp
 permalink: /2026-05-09-makeup-safety-what-the-science-says/
 ---

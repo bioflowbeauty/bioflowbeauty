@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Hormonal Health in Women: What the Science Says About Balance, Cycles, and Symptoms"
-subtitle: "Understanding the biology behind hormonal fluctuations — and what evidence-based approaches actually help"
+subtitle: "Understanding the biology behind hormonal fluctuations and what evidence-based approaches actually help"
 date: 2026-05-06
 tags: [hormones, women's-health, menstrual-health, menopause, evidence-based]
 description: "A biomedical scientist explains the biology of female hormonal health across the lifespan, covering the menstrual cycle, PMS, perimenopause, thyroid function, and the lifestyle factors with the strongest evidence for hormonal regulation."
+cover-img: /assets/img/posts/hormonal-health-hero.webp
 thumbnail-img: /assets/img/posts/hormonal-health-hero.webp
 permalink: /2026-05-06-hormonal-health-women-what-the-science-says/
 ---

@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "5 Science-Backed Health Habits Every Woman Should Know"
-subtitle: "A biomedical scientist's guide to the changes that actually move the needle"
+subtitle: "A biomedical scientist on the habits that actually move the needle"
 date: 2026-04-28
 tags: [women's-health, nutrition, sleep, stress, prevention, evidence-based]
 description: "A biomedical scientist reviews the five health habits with the strongest evidence for women: sleep quality, nutrition foundations, stress regulation, movement, and preventive screening."
+cover-img: /assets/img/posts/women-health-habits-hero.webp
 thumbnail-img: /assets/img/posts/women-health-habits-hero.webp
 permalink: /2026-04-28-5-science-backed-health-habits-for-women/
 ---

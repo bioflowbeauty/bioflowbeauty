@@ -5,6 +5,7 @@ subtitle: "What the evidence says about the conditions most affecting women and 
 date: 2026-05-22
 tags: [prevention, women's-health, screening, cardiovascular, evidence-based]
 description: "A biomedical scientist reviews the major diseases affecting women disproportionately or differently, the screening recommendations with the strongest evidence base, and the lifestyle factors most consistently associated with reduced risk."
+cover-img: /assets/img/posts/disease-prevention-hero.webp
 thumbnail-img: /assets/img/posts/disease-prevention-hero.webp
 permalink: /2026-05-22-disease-prevention-for-women/
 ---
